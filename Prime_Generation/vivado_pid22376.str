@@ -1,0 +1,502 @@
+/*
+
+Xilinx Vivado v2022.2 (64-bit) [Major: 2022, Minor: 2]
+SW Build: 3671981 on Fri Oct 14 05:00:03 MDT 2022
+IP Build: 3669848 on Fri Oct 14 08:30:02 MDT 2022
+
+Process ID (PID): 22376
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Tue Mar 28 14:45:16 EDT 2023
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 1920x1080
+Screen resolution (DPI): 125
+Available screens: 1
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=15
+Scale size: 19
+
+Java version: 	11.0.11 64-bit
+Java home: 	D:/Programs/Xilinx/Vivado/2022.2/tps/win64/jre11.0.11_9
+Java executable: 	D:/Programs/Xilinx/Vivado/2022.2/tps/win64/jre11.0.11_9/bin/java.exe
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.d3d=false, -Dsun.awt.nopixfmt=true, -Dsun.java2d.dpiaware=true, -Dsun.java2d.uiScale.enabled=false, -Xverify:none, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, --add-opens=java.desktop/com.sun.awt=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, -XX:NewSize=60m, -XX:MaxNewSize=60m, -Xms256m, -Xmx3072m, -Xss5m]
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	adria
+User home directory: C:/Users/adria
+User working directory: D:/Programs/Xilinx/Projects/TCL_Test2/Prime_Generation
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: D:/Programs/Xilinx/Vivado
+HDI_APPROOT: D:/Programs/Xilinx/Vivado/2022.2
+RDI_DATADIR: D:/Programs/Xilinx/Vivado/2022.2/data
+RDI_BINDIR: D:/Programs/Xilinx/Vivado/2022.2/bin
+
+Vivado preferences file: C:/Users/adria/AppData/Roaming/Xilinx/Vivado/2022.2/vivado.xml
+Vivado preferences directory: C:/Users/adria/AppData/Roaming/Xilinx/Vivado/2022.2/
+Vivado layouts directory: C:/Users/adria/AppData/Roaming/Xilinx/Vivado/2022.2/data/layouts
+PlanAhead jar file: 	D:/Programs/Xilinx/Vivado/2022.2/lib/classes/planAhead.jar
+Vivado log file: 	D:/Programs/Xilinx/Projects/TCL_Test2/Prime_Generation/vivado.log
+Vivado journal file: 	D:/Programs/Xilinx/Projects/TCL_Test2/Prime_Generation/vivado.jou
+Engine tmp dir: 	D:/Programs/Xilinx/Projects/TCL_Test2/Prime_Generation/.Xil/Vivado-22376-DESKTOP-URGPKP9
+
+Xilinx Environment Variables
+----------------------------
+EXE4J_JAVA_HOME: C:\Program Files\Java\jre1.8.0_231
+RDI_APPROOT: D:/Programs/Xilinx/Vivado/2022.2
+RDI_ARGS:  -gui_launcher_event rodinguilauncherevent15108 "D:\Programs\Xilinx\Projects\TCL_Test2\Prime_Generation\Prime_Generation.xpr"
+RDI_ARGS_FUNCTION: RDI_EXEC_DEFAULT
+RDI_BASEROOT: D:/Programs/Xilinx/Vivado
+RDI_BINDIR: D:/Programs/Xilinx/Vivado/2022.2/bin
+RDI_BINROOT: D:/Programs/Xilinx/Vivado/2022.2/bin
+RDI_BUILD: yes
+RDI_CHECK_PROG: True
+RDI_DATADIR: D:/Programs/Xilinx/Vivado/2022.2/data
+RDI_INSTALLROOT: D:/Programs/Xilinx
+RDI_INSTALLVER: 2022.2
+RDI_INSTALLVERSION: 2022.2
+RDI_ISE_PLATFORM: nt64
+RDI_JAVACEFROOT: D:/Programs/Xilinx/Vivado/2022.2/tps/win64/java-cef-95.0.4638.69
+RDI_JAVAFXROOT: D:/Programs/Xilinx/Vivado/2022.2/tps/win64/javafx-sdk-11.0.2
+RDI_JAVAROOT: D:/Programs/Xilinx/Vivado/2022.2/tps/win64/jre11.0.11_9
+RDI_JAVA_VERSION: 11.0.11_9
+RDI_LIBDIR: D:/Programs/Xilinx/Vivado/2022.2/lib/win64.o
+RDI_MINGW_LIB: D:/Programs/Xilinx/Vivado/2022.2\tps\mingw\6.2.0\win64.o\nt\bin;D:/Programs/Xilinx/Vivado/2022.2\tps\mingw\6.2.0\win64.o\nt\libexec\gcc\x86_64-w64-mingw32\6.2.0
+RDI_OPT_EXT: .o
+RDI_PLATFORM: win64
+RDI_PREPEND_PATH: D:/Programs/Xilinx/Vitis/2022.2/bin;D:/Programs/Xilinx/Vivado/2022.2/ids_lite/ISE/bin/nt64;D:/Programs/Xilinx/Vivado/2022.2/ids_lite/ISE/lib/nt64
+RDI_PROG: D:/Programs/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/vivado.exe
+RDI_PROGNAME: vivado.exe
+RDI_PYTHON3: D:/Programs/Xilinx/Vivado/2022.2\tps\win64\python-3.8.3
+RDI_PYTHON3_VERSION: 3.8.3
+RDI_PYTHONHOME: D:/Programs/Xilinx/Vivado/2022.2\tps\win64\python-3.8.3
+RDI_PYTHONPATH: D:/Programs/Xilinx/Vivado/2022.2\tps\win64\python-3.8.3;D:/Programs/Xilinx/Vivado/2022.2\tps\win64\python-3.8.3\bin;D:/Programs/Xilinx/Vivado/2022.2\tps\win64\python-3.8.3\lib;D:/Programs/Xilinx/Vivado/2022.2\tps\win64\python-3.8.3\lib\site-packages
+RDI_PYTHON_LD_LIBPATH: D:/Programs/Xilinx/Vivado/2022.2\tps\win64\python-3.8.3\lib
+RDI_TPS_ROOT: D:/Programs/Xilinx/Vivado/2022.2/tps/win64
+RDI_USE_JDK11: True
+RDI_VERBOSE: False
+XILINX: D:/Programs/Xilinx/Vivado/2022.2/ids_lite/ISE
+XILINX_DSP: D:/Programs/Xilinx/Vivado/2022.2/ids_lite/ISE
+XILINX_HLS: D:/Programs/Xilinx/Vitis_HLS/2022.2
+XILINX_PLANAHEAD: D:/Programs/Xilinx/Vivado/2022.2
+XILINX_SDK: D:/Programs/Xilinx/Vitis/2022.2
+XILINX_VITIS: D:/Programs/Xilinx/Vitis/2022.2
+XILINX_VIVADO: D:/Programs/Xilinx/Vivado/2022.2
+XILINX_VIVADO_HLS: D:/Programs/Xilinx/Vivado/2022.2
+_RDI_BINROOT: D:\Programs\Xilinx\Vivado\2022.2\bin
+_RDI_CWD: D:\Programs\Xilinx\Projects\TCL_Test2\Prime_Generation
+
+
+GUI allocated memory:	392 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 899 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: D:\Programs\Xilinx\Projects\TCL_Test2\Prime_Generation\Prime_Generation.xpr. Version: Vivado v2022.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project D:/Programs/Xilinx/Projects/TCL_Test2/Prime_Generation/Prime_Generation.xpr 
+// HMemoryUtils.trashcanNow. Engine heap size: 919 MB. GUI used memory: 61 MB. Current time: 3/28/23, 2:45:17 PM EDT
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 78 MB (+78993kb) [00:00:12]
+// [Engine Memory]: 950 MB (+844876kb) [00:00:12]
+// [GUI Memory]: 98 MB (+16718kb) [00:00:13]
+// WARNING: HEventQueue.dispatchEvent() is taking  2142 ms.
+// Tcl Message: open_project D:/Programs/Xilinx/Projects/TCL_Test2/Prime_Generation/Prime_Generation.xpr 
+// Tcl Message: INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'D:/Programs/Xilinx/Projects/TCL_Test2/Prime_Generation/Prime_Generation.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programs/Xilinx/Vivado/2022.2/data/ip'. 
+// [GUI Memory]: 103 MB (+870kb) [00:00:14]
+// Project name: Prime_Generation; location: D:/Programs/Xilinx/Projects/TCL_Test2/Prime_Generation; part: xc7z020clg484-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:08 . Memory (MB): peak = 1163.699 ; gain = 216.488 
+dismissDialog("Open Project"); // bq
+// [GUI Memory]: 130 MB (+22408kb) [00:00:15]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Tcl Message: update_compile_order -fileset sim_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1, true, false, false, false, false, true); // D - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, key_gen.v]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, key_gen.v]", 2, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("key_gen.v", 93, 189); // ac
+selectCodeEditor("key_gen.v", 205, 129); // ac
+selectCodeEditor("key_gen.v", 205, 118); // ac
+selectCodeEditor("key_gen.v", 229, 130); // ac
+selectCodeEditor("key_gen.v", 227, 114); // ac
+selectCodeEditor("key_gen.v", 273, 118); // ac
+selectButton(PAResourceEtoH.FileSetPanel_MESSAGES, "2"); // g
+selectCodeEditor("key_gen.v", 387, 113); // ac
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Create Block Design]", 6, false); // f
+// Run Command: PAResourceCommand.PACommandNames_CREATE_NEW_DIAGRAM
+// Elapsed time: 23 seconds
+setText(PAResourceAtoD.CreateNewDiagramDialog_DESIGN_NAME, "ADC"); // Q
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// 'O' command handler elapsed time: 23 seconds
+dismissDialog("Create Block Design"); // au
+// TclEventType: LOAD_FEATURE
+// Tcl Message: create_bd_design "ADC" 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: Wrote  : <D:\Programs\Xilinx\Projects\TCL_Test2\Prime_Generation\Prime_Generation.srcs\sources_1\bd\ADC\ADC.bd>  
+// HMemoryUtils.trashcanNow. Engine heap size: 1,028 MB. GUI used memory: 72 MB. Current time: 3/28/23, 2:46:37 PM EDT
+// TclEventType: RSB_OPEN_DIAGRAM
+// [Engine Memory]: 1,108 MB (+115405kb) [00:01:34]
+// WARNING: HEventQueue.dispatchEvent() is taking  1195 ms.
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // t
+// Tcl Message: create_bd_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1236.723 ; gain = 73.023 
+dismissDialog("Create Block Design"); // bq
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+floatFrame(PAResourceOtoP.PAViews_SYSTEM, "Diagram"); // R
+// PAResourceOtoP.PAViews_SYSTEM: System: float view
+maximizeFrame(PAResourceOtoP.PAViews_SYSTEM, "Diagram"); // R
+unMaximizeFrame(PAResourceOtoP.PAViews_SYSTEM, "Diagram"); // R
+// [GUI Memory]: 137 MB (+453kb) [00:02:04]
+// [GUI Memory]: 144 MB (+84kb) [00:02:09]
+// Elapsed time: 23 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 238, 330, 914, 958, false, false, false, true, false); // fK - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // al
+selectButton(PAResourceQtoS.SystemBuilderView_ADD_IP, "System_RSB_ADD_IP"); // B
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "xadc"); // OverlayTextField
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "XADC Wizard", 0, "XADC Wizard", 0, false); // z
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "XADC Wizard", 0); // z
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "XADC Wizard", 0, "XADC Wizard", 0, false, false, false, false, false, true); // z - Double Click
+// TclEventType: LOAD_FEATURE
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:xadc_wiz:3.3 xadc_wiz_0 
+// Tcl Message: INFO: [Device 21-403] Loading part xc7z020clg484-1 
+// [Engine Memory]: 1,217 MB (+56077kb) [00:02:32]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,432 MB. GUI used memory: 78 MB. Current time: 3/28/23, 2:47:42 PM EDT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// [Engine Memory]: 1,505 MB (+238612kb) [00:02:36]
+// Tcl Message: endgroup 
+dismissDialog("Add IP"); // bq
+// JavaFX intialization before: 1680029263767
+// JavaFX initialization after: 1680029263955
+// WARNING: HTimer (Open addressing views timer) is taking 234ms to process. Increasing delay to 1300 ms.
+// [Engine Memory]: 1,636 MB (+58279kb) [00:02:37]
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 212, 639, 914, 958, false, false, false, true, false); // fK - Popup Trigger
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 450, 456, 914, 958, false, false, false, true, false); // fK - Popup Trigger
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// Elapsed time: 11 seconds
+selectRadioButton((HResource) null, "Channel Sequencer"); // cC
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "ADC Setup", 1); // cH
+// Elapsed time: 17 seconds
+selectComboBox("Channel Averaging (CHANNEL_AVERAGING)", "16", 1); // bM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,671 MB. GUI used memory: 90 MB. Current time: 3/28/23, 2:48:22 PM EDT
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Alarms", 2); // cH
+selectCheckBox((HResource) null, "Over Temperature Alarm (°C)", false); // f: FALSE
+selectCheckBox((HResource) null, "VCCINT Alarm (Volts)", false); // f: FALSE
+selectCheckBox((HResource) null, "User Temperature Alarm (°C)", false); // f: FALSE
+selectCheckBox((HResource) null, "VCCAUX Alarm (Volts)", false); // f: FALSE
+selectCheckBox((HResource) null, "VCCPint Alarm (Volts)", false); // f: FALSE
+selectCheckBox((HResource) null, "VCCDdro Alarm(Volts)", false); // f: FALSE
+selectCheckBox((HResource) null, "VCCPaux Alarm (Volts)", false); // f: FALSE
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Channel Sequencer", 3); // cH
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Re-customize IP"); // m
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property -dict [list \   CONFIG.AVERAGE_ENABLE_VP_VN {true} \   CONFIG.CHANNEL_AVERAGING {16} \   CONFIG.CHANNEL_ENABLE_VP_VN {true} \   CONFIG.ENABLE_VCCDDRO_ALARM {false} \   CONFIG.ENABLE_VCCPAUX_ALARM {false} \   CONFIG.ENABLE_VCCPINT_ALARM {false} \   CONFIG.EXTERNAL_MUX_CHANNEL {VP_VN} \   CONFIG.OT_ALARM {false} \   CONFIG.SEQUENCER_MODE {Continuous} \   CONFIG.SINGLE_CHANNEL_SELECTION {TEMPERATURE} \   CONFIG.USER_TEMP_ALARM {false} \   CONFIG.VCCAUX_ALARM {false} \   CONFIG.VCCINT_ALARM {false} \   CONFIG.XADC_STARUP_SELECTION {channel_sequencer} \ ] [get_bd_cells xadc_wiz_0] 
+// [GUI Memory]: 152 MB (+1549kb) [00:03:32]
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 273, 212, 914, 958, false, false, false, true, false); // fK - Popup Trigger
+selectButton(PAResourceQtoS.SystemBuilderView_ADD_IP, "System_RSB_ADD_IP"); // B
+// [GUI Memory]: 160 MB (+281kb) [00:03:37]
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "process"); // OverlayTextField
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "ZYNQ7 Processing System", 5, "ZYNQ7 Processing System", 0, false); // z
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "ZYNQ7 Processing System", 5); // z
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "ZYNQ7 Processing System", 5, "ZYNQ7 Processing System", 0, false, false, false, false, false, true); // z - Double Click
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: endgroup 
+dismissDialog("Add IP"); // bq
+// HMemoryUtils.trashcanNow. Engine heap size: 1,717 MB. GUI used memory: 94 MB. Current time: 3/28/23, 2:48:57 PM EDT
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// [Engine Memory]: 1,734 MB (+17274kb) [00:03:52]
+// Elapsed time: 16 seconds
+selectTreeTable(PAResourceItoN.MIOConfigTreeTablePanel_MIO_CONFIG_TREE_TABLE, "Timer 0 ;  ;  ;  ;  ;  ;  ; ", 3, "Timer 0", 0, false); // as
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Re-customize IP"); // m
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property CONFIG.PCW_TTC0_PERIPHERAL_ENABLE {1} [get_bd_cells processing_system7_0] 
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// Elapsed time: 64 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Re-customize IP"); // m
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 300, 587, 914, 958, false, false, false, true, false); // fK - Popup Trigger
+selectButton(PAResourceQtoS.SystemBuilderView_ADD_IP, "System_RSB_ADD_IP"); // B
+// [GUI Memory]: 178 MB (+10570kb) [00:05:20]
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "axi inter"); // OverlayTextField
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI Interconnect", 1, "AXI Interconnect", 0, false); // z
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI Interconnect", 1); // z
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI Interconnect", 1, "AXI Interconnect", 0, false, false, false, false, false, true); // z - Double Click
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_interconnect_0 
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: endgroup 
+dismissDialog("Add IP"); // bq
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+selectComboBox("Number of Master Interfaces (NUM_MI)", "1", 0); // bM
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Slave Interfaces", 1); // cH
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Re-customize IP"); // m
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property CONFIG.NUM_MI {1} [get_bd_cells axi_interconnect_0] 
+selectButton(PAResourceQtoS.RSBApplyAutomationBar_RUN_BLOCK_AUTOMATION, "Run Block Automation"); // g
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: RSB_SCRIPT_TASK
+dismissDialog("Run Block Automation"); // B
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0] 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,809 MB. GUI used memory: 127 MB. Current time: 3/28/23, 2:50:47 PM EDT
+// TclEventType: RSB_SCRIPT_TASK
+dismissDialog("Run Block Automation"); // bq
+selectButton(PAResourceQtoS.RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION, "Run Connection Automation"); // g
+selectCheckBoxTree(PAResourceAtoD.ApplyRSBMultiAutomationDialog_CHECKBOX_TREE, "[All Automation (2 out of 2 selected)]", 0, true, true, ui.utils.collection.couples.TriState.True); // B.c - Node
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Run Connection Automation"); // B
+// TclEventType: XGUI_UPDATE_GUI_ELEMENT
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: XGUI_UPDATE_GUI_ELEMENT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: XGUI_RESET_GUI_ELEMENT
+// Tcl Message: startgroup 
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (50 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins axi_interconnect_0/ACLK] 
+// Tcl Message: INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI 
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/xadc_wiz_0/s_axi_lite} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins xadc_wiz_0/s_axi_lite] 
+// Tcl Message: Slave segment '/xadc_wiz_0/s_axi_lite/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x43C0_0000 [ 64K ]>. 
+// Tcl Message: endgroup 
+selectButton(PAResourceQtoS.SystemBuilderView_OPTIMIZE_ROUTING, "System_RSB_OPTIMIZE_LAYOUT"); // B
+// Tcl Command: 'regenerate_bd_layout -routing'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_ROUTE_LAYOUT
+// Tcl Message: regenerate_bd_layout -routing 
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : <D:\Programs\Xilinx\Projects\TCL_Test2\Prime_Generation\Prime_Generation.srcs\sources_1\bd\ADC\ADC.bd>  Wrote  : <D:/Programs/Xilinx/Projects/TCL_Test2/Prime_Generation/Prime_Generation.srcs/sources_1/bd/ADC/ui/bd_bc00ac80.ui>  
+maximizeFrame(PAResourceOtoP.PAViews_SYSTEM, "Diagram"); // R
+unMaximizeFrame(PAResourceOtoP.PAViews_SYSTEM, "Diagram"); // R
+dockFrame(PAResourceOtoP.PAViews_SYSTEM, "Diagram"); // R
+// PAResourceOtoP.PAViews_SYSTEM: System: dock view
+// [Engine Memory]: 1,835 MB (+14909kb) [00:05:59]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,836 MB. GUI used memory: 129 MB. Current time: 3/28/23, 2:51:07 PM EDT
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aa
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, key_gen.v]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, key_gen.v]", 2, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // f
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: open_bd_design {D:/Programs/Xilinx/Projects/TCL_Test2/Prime_Generation/Prime_Generation.srcs/sources_1/bd/ADC/ADC.bd} 
+dismissDialog("Open Block Design"); // bq
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ADC (ADC.bd)]", 5, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_CREATE_TOP_HDL, "Create HDL Wrapper..."); // ao
+// Run Command: PAResourceCommand.PACommandNames_CREATE_TOP_HDL
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Create HDL Wrapper"); // a
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: make_wrapper -files [get_files D:/Programs/Xilinx/Projects/TCL_Test2/Prime_Generation/Prime_Generation.srcs/sources_1/bd/ADC/ADC.bd] -top 
+// Tcl Message: Wrote  : <D:\Programs\Xilinx\Projects\TCL_Test2\Prime_Generation\Prime_Generation.srcs\sources_1\bd\ADC\ADC.bd>  Verilog Output written to : D:/Programs/Xilinx/Projects/TCL_Test2/Prime_Generation/Prime_Generation.gen/sources_1/bd/ADC/synth/ADC.v Verilog Output written to : D:/Programs/Xilinx/Projects/TCL_Test2/Prime_Generation/Prime_Generation.gen/sources_1/bd/ADC/sim/ADC.v Verilog Output written to : D:/Programs/Xilinx/Projects/TCL_Test2/Prime_Generation/Prime_Generation.gen/sources_1/bd/ADC/hdl/ADC_wrapper.v 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse d:/Programs/Xilinx/Projects/TCL_Test2/Prime_Generation/Prime_Generation.gen/sources_1/bd/ADC/hdl/ADC_wrapper.v 
+dismissDialog("Create HDL Wrapper"); // bq
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 325 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "key_gen.v", 1); // o
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 648507 ms. Increasing delay to 1945521 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,846 MB. GUI used memory: 129 MB. Current time: 3/28/23, 3:21:11 PM EDT
+// Elapsed time: 2279 seconds
+selectCodeEditor("key_gen.v", 261, 113); // ac
+selectCodeEditor("key_gen.v", 202, 229); // ac
+selectCodeEditor("key_gen.v", 247, 143, false, false, false, true, false); // ac - Popup Trigger
+selectCodeEditor("key_gen.v", 151, 169); // ac
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, miller_rabin (miller_rabin.v)]", 4, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, miller_rabin (miller_rabin.v)]", 4, true, false, false, false, false, true); // D - Double Click - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "key_gen.v", 1); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "miller_rabin.v", 5); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "key_gen.v", 1); // o
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 5 ms. Decreasing delay to 2005 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,846 MB. GUI used memory: 113 MB. Current time: 3/28/23, 3:51:12 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,846 MB. GUI used memory: 113 MB. Current time: 3/28/23, 4:21:12 PM EDT
+// WARNING: HEventQueue.dispatchEvent() is taking  337100 ms.
+// Elapsed time: 3806 seconds
+closeMainWindow("Prime_Generation - [D:/Programs/Xilinx/Projects/TCL_Test2/Prime_Generation/Prime_Generation.xpr] - Vivado 2022.2"); // aK
+// Run Command: PAResourceCommand.PACommandNames_EXIT
