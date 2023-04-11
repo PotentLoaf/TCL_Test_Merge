@@ -19,19 +19,19 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
-module prime_tb(
+module prime_tb #(parameter WORDSIZE = 128)(
 
 );
 
-    reg [63:0] accuracy;
-    reg [31:0] potential_prime;
+    reg [WORDSIZE*2 -1:0] accuracy;
+    reg [WORDSIZE-1:0] potential_prime;
     reg prime_reset, clk, rand_reset;
     wire finish, prime;
+    reg [31:0] rand_count_top = 0;
 
     initial begin
-    potential_prime = 32'd3;
-    accuracy = 64'd5;
+    potential_prime = 3;
+    accuracy = 5;
 
     clk = 1'b0;
 
@@ -50,39 +50,33 @@ module prime_tb(
     end
 
 
-    wire [126:0] seed_in1 = {{7{16'haaaa}},15'haaa3};
-    wire [126:0] seed_in2 = {{7{16'haaaa}},15'h3244};
+    wire [126:0] seed_in = {{7{16'haaaa}},15'haaa3};
 
-    wire [15:0] rand_out1;
-    wire [15:0] rand_out2;
-
-    always @ (posedge finish) begin
-    potential_prime <= {rand_out1, rand_out2[15:1], 1'b1};
-    prime_reset <= 1'b1;
-
+    wire [15:0] rand_out;
+    always @ (posedge clk) begin
+        if (finish) begin
+            if (rand_count_top < WORDSIZE/16) begin
+                potential_prime[(rand_count_top+1)*16-1 -: 16] <= rand_out;
+                rand_count_top <= rand_count_top + 1;
+            end else begin
+                prime_reset <= 1'b1;
+            end
+        end  
+        if (prime_reset) begin
+            prime_reset <= 1'b0;
+            rand_count_top <= 1'b0;
+        end
     end
-    always @ (negedge (finish)) begin
-    prime_reset <= 1'b0;
-    end
 
-    rand127 rand1(
-    .rand_out(rand_out1),
-    .seed_in (seed_in1),
+    rand127 rand(
+    .rand_out(rand_out),
+    .seed_in (seed_in),
     .state_in(4'd0),
     .clock_in(clk),
     .reset_in(rand_reset)
     );
 
-    rand127 rand2(
-    .rand_out(rand_out2),
-    .seed_in (seed_in2),
-    .state_in(4'd0),
-    .clock_in(clk),
-    .reset_in(rand_reset)
-    );
-
-
-    miller_rabin prime_gen(
+    miller_rabin  #(.WORDSIZE(WORDSIZE)) prime_gen (
     .start_number(potential_prime),
     .accuracy(accuracy),
     .clk(clk),

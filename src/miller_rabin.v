@@ -2,7 +2,7 @@
 `timescale 1ns / 1ps
 
 //Generates primes 
-module miller_rabin (
+module  miller_rabin #(parameter WORDSIZE = 32) (
     input [WORDSIZE-1:0] start_number,
     input [WORDSIZE-1:0] accuracy,
     input clk,
@@ -10,9 +10,6 @@ module miller_rabin (
     output reg prime,
     output finish
 );
-
-    localparam WORDSIZE = 32;
-
 
     reg [WORDSIZE*2-1:0] base, base2; // base2 and exponent2 are internal base and exponent
     reg [WORDSIZE-1:0] modulo;
@@ -66,9 +63,8 @@ module miller_rabin (
 
     assign finish = (state == HOLD) ? 1'b1 : 1'b0;
 
-    reg [31:0] baseshift;
-    reg [1:0] twotimes;
-    wire [31:0] myrandnum = {rand_out, baseshift[15:0]};
+    reg [31:0] rand_count;
+    reg [WORDSIZE-1:0] myrandnum;
     wire [WORDSIZE-1:0] nminus2 = n - 2'd2;
 
     wire [126:0] seed_in = {{7{16'haaaa}},15'h5aaa};
@@ -87,27 +83,25 @@ module miller_rabin (
     always @ (posedge clk) begin
         if (reset) begin
             n <= start_number;
-            d <= start_number - 32'd1;
-            s <= 32'd0;
-            k <= 32'd0;
-            base <= 32'd0;
-            baseshift <= 32'd0;
-            modulo <= 32'b0;
-            exponent <= 32'b0;
-            count_to_s <= 32'd0;
+            d <= start_number - 1;
+            s <= 0;
+            k <= 0;
+            base <= 0;
+            modulo <= 0;
+            exponent <= 0;
+            count_to_s <= 0;
             accuracy_reg <= accuracy;
             state <= FACTORING;
-            mod_exp_reset <= 1'b1;
-            rand_reset <= 1'b1;
-            prime <= 1'b0;
-            twotimes <= 2'b00;
+            mod_exp_reset <= 1;
+            rand_reset <= 1;
+            prime <= 0;
+            rand_count <= 0;
         end
         else case (state)
             FACTORING : begin
                 rand_reset <= 1'b0;
                 if (d[0]) begin //d % 2 == 1
                     state <= GET_RANDOM;
-                    baseshift <= 2'd2; //rawr
                 end
                 else begin //d % 2 == 0
                     d <= d >> 1; //d = d / 2
@@ -115,32 +109,19 @@ module miller_rabin (
                 end
             end
             GET_RANDOM: begin
-                if (twotimes == 2'b0) begin
-                    baseshift <= {16'b0,rand_out};
-                    twotimes <= 2'b01;
+                if (rand_count < WORDSIZE/16) begin
+                    myrandnum[(rand_count+1)*16-1 -: 16] <= rand_out;
+                    rand_count <= rand_count + 1;
+                end else if (myrandnum > nminus2) begin
+                    myrandnum <= myrandnum >> 1;
                 end
                 else begin
-                    // need to limit base to [2,n-2]
-                    if ((twotimes == 2'b01) & (myrandnum < 32'd2)) begin
-                        twotimes <= 2'b0; // redo if less than 2
-                    end
-                    // shift right until in range
-                    else if ((twotimes == 2'b01) & (myrandnum > nminus2)) begin
-                        twotimes <= 2'b11; // use this as a sel for base also
-                        baseshift <= myrandnum >> 1;
-                    end
-                    else if ((twotimes == 2'b11) & (baseshift > nminus2)) begin
-                        baseshift <= baseshift >> 1;
-                    end
-                    else begin
-                        twotimes <= 2'b00;
-                        base <= (twotimes == 2'b11) ? baseshift : myrandnum;
+                        base <= myrandnum;
                         modulo <= n;
                         exponent <= d;
                         state <= MOD_EXP_WAIT;
                     end
                 end
-            end
             MOD_EXP_WAIT: begin
                 mod_exp_reset <= 1'b0;
                 if (~mod_exp_reset & mod_exp_finish) begin
