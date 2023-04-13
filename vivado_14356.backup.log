@@ -2,12 +2,12 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Tue Apr 11 11:15:04 2023
-# Process ID: 89772
-# Current directory: D:/Programs/Xilinx/Projects/TCL_Test_Merge
+# Start of session at: Tue Mar 28 14:41:57 2023
+# Process ID: 14356
+# Current directory: D:/Programs/Xilinx/Projects/TCL_Test2
 # Command line: vivado.exe -mode batch -source build.tcl
-# Log file: D:/Programs/Xilinx/Projects/TCL_Test_Merge/vivado.log
-# Journal file: D:/Programs/Xilinx/Projects/TCL_Test_Merge\vivado.jou
+# Log file: D:/Programs/Xilinx/Projects/TCL_Test2/vivado.log
+# Journal file: D:/Programs/Xilinx/Projects/TCL_Test2\vivado.jou
 # Running On: DESKTOP-URGPKP9, OS: Windows, CPU Frequency: 2208 MHz, CPU Physical cores: 6, Host memory: 34142 MB
 #-----------------------------------------------------------
 source build.tcl
@@ -31,7 +31,7 @@ source build.tcl
 # 
 #   return $status
 # }
-# set origin_dir [file dirname [info script]]
+# set origin_dir "."
 # if { [info exists ::origin_dir_loc] } {
 #   set origin_dir $::origin_dir_loc
 # }
@@ -83,7 +83,7 @@ source build.tcl
 #     }
 #   }
 # }
-# set orig_proj_dir "[file normalize "$origin_dir/orig-project"]"
+# set orig_proj_dir "[file normalize "$origin_dir/../Prime_Generation"]"
 # set validate_required 0
 # if { $validate_required } {
 #   if { [checkRequiredFiles $origin_dir] } {
@@ -93,8 +93,8 @@ source build.tcl
 #     return
 #   }
 # }
-# create_project myproject $origin_dir/myproject -part xc7z020clg484-1
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 377.797 ; gain = 62.047
+# create_project ${_xil_proj_name_} ./${_xil_proj_name_} -part xc7z020clg484-1
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 376.793 ; gain = 60.820
 # set proj_dir [get_property directory [current_project]]
 # set obj [current_project]
 # set_property -name "board_part" -value "xilinx.com:zc702:part0:1.4" -objects $obj
@@ -152,4 +152,4 @@ WARNING: [Vivado 12-818] No files matched '*synth_1/miller_rabin.dcp'
 # set_property -name "netlist_only" -value "0" -objects $file_obj
 ERROR: [Common 17-55] 'set_property' expects at least one object.
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-INFO: [Common 17-206] Exiting Vivado at Tue Apr 11 11:15:13 2023...
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 28 14:42:05 2023...
