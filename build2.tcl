@@ -58,8 +58,8 @@ proc checkRequiredFiles { origin_dir} {
 
   return $status
 }
-# Set the reference directory for source file relative paths (by default the value is script directory path)
-set origin_dir "."
+# Set the reference directory to where the script is
+set origin_dir [file dirname [info script]]
 
 # Use origin directory path location variable, if specified in the tcl shell
 if { [info exists ::origin_dir_loc] } {
@@ -122,8 +122,6 @@ if { $::argc > 0 } {
   }
 }
 
-# Set the directory path for the original project from where this script was exported
-set orig_proj_dir "[file normalize "$origin_dir/myproject"]"
 
 # Check for paths and files needed for project creation
 set validate_required 0
@@ -137,7 +135,7 @@ if { $validate_required } {
 }
 
 # Create project
-create_project ${_xil_proj_name_} ./${_xil_proj_name_} -part xc7z020clg484-1
+create_project myproject $origin_dir/myproject -part xc7z020clg484-1
 
 # Set the directory path for the new project
 set proj_dir [get_property directory [current_project]]

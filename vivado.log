@@ -1,0 +1,155 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Tue Apr 11 11:15:04 2023
+# Process ID: 89772
+# Current directory: D:/Programs/Xilinx/Projects/TCL_Test_Merge
+# Command line: vivado.exe -mode batch -source build.tcl
+# Log file: D:/Programs/Xilinx/Projects/TCL_Test_Merge/vivado.log
+# Journal file: D:/Programs/Xilinx/Projects/TCL_Test_Merge\vivado.jou
+# Running On: DESKTOP-URGPKP9, OS: Windows, CPU Frequency: 2208 MHz, CPU Physical cores: 6, Host memory: 34142 MB
+#-----------------------------------------------------------
+source build.tcl
+# proc checkRequiredFiles { origin_dir} {
+#   set status true
+#   set files [list \
+#  "[file normalize "$origin_dir/src/rand127.v"]"\
+#  "[file normalize "$origin_dir/src/miller_rabin.v"]"\
+#  "[file normalize "$origin_dir/src/key_gen.v"]"\
+#  "[file normalize "$origin_dir/src/prime_tb.v"]"\
+#  "[file normalize "$origin_dir/src/rand_tb.v"]"\
+#  "[file normalize "$origin_dir/src/prime_tb_behav.wcfg"]"\
+#  "[file normalize "$origin_dir/src/miller_rabin.dcp"]"\
+#   ]
+#   foreach ifile $files {
+#     if { ![file isfile $ifile] } {
+#       puts " Could not find local file $ifile "
+#       set status false
+#     }
+#   }
+# 
+#   return $status
+# }
+# set origin_dir [file dirname [info script]]
+# if { [info exists ::origin_dir_loc] } {
+#   set origin_dir $::origin_dir_loc
+# }
+# set _xil_proj_name_ "Prime_Generation"
+# if { [info exists ::user_project_name] } {
+#   set _xil_proj_name_ $::user_project_name
+# }
+# variable script_file
+# set script_file "build.tcl"
+# proc print_help {} {
+#   variable script_file
+#   puts "\nDescription:"
+#   puts "Recreate a Vivado project from this script. The created project will be"
+#   puts "functionally equivalent to the original project for which this script was"
+#   puts "generated. The script contains commands for creating a project, filesets,"
+#   puts "runs, adding/importing sources and setting properties on various objects.\n"
+#   puts "Syntax:"
+#   puts "$script_file"
+#   puts "$script_file -tclargs \[--origin_dir <path>\]"
+#   puts "$script_file -tclargs \[--project_name <name>\]"
+#   puts "$script_file -tclargs \[--help\]\n"
+#   puts "Usage:"
+#   puts "Name                   Description"
+#   puts "-------------------------------------------------------------------------"
+#   puts "\[--origin_dir <path>\]  Determine source file paths wrt this path. Default"
+#   puts "                       origin_dir path value is \".\", otherwise, the value"
+#   puts "                       that was set with the \"-paths_relative_to\" switch"
+#   puts "                       when this script was generated.\n"
+#   puts "\[--project_name <name>\] Create project with the specified name. Default"
+#   puts "                       name is the name of the project from where this"
+#   puts "                       script was generated.\n"
+#   puts "\[--help\]               Print help information for this script"
+#   puts "-------------------------------------------------------------------------\n"
+#   exit 0
+# }
+# if { $::argc > 0 } {
+#   for {set i 0} {$i < $::argc} {incr i} {
+#     set option [string trim [lindex $::argv $i]]
+#     switch -regexp -- $option {
+#       "--origin_dir"   { incr i; set origin_dir [lindex $::argv $i] }
+#       "--project_name" { incr i; set _xil_proj_name_ [lindex $::argv $i] }
+#       "--help"         { print_help }
+#       default {
+#         if { [regexp {^-} $option] } {
+#           puts "ERROR: Unknown option '$option' specified, please type '$script_file -tclargs --help' for usage info.\n"
+#           return 1
+#         }
+#       }
+#     }
+#   }
+# }
+# set orig_proj_dir "[file normalize "$origin_dir/orig-project"]"
+# set validate_required 0
+# if { $validate_required } {
+#   if { [checkRequiredFiles $origin_dir] } {
+#     puts "Tcl file $script_file is valid. All files required for project creation is accesable. "
+#   } else {
+#     puts "Tcl file $script_file is not valid. Not all files required for project creation is accesable. "
+#     return
+#   }
+# }
+# create_project myproject $origin_dir/myproject -part xc7z020clg484-1
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 377.797 ; gain = 62.047
+# set proj_dir [get_property directory [current_project]]
+# set obj [current_project]
+# set_property -name "board_part" -value "xilinx.com:zc702:part0:1.4" -objects $obj
+# set_property -name "default_lib" -value "xil_defaultlib" -objects $obj
+# set_property -name "enable_resource_estimation" -value "0" -objects $obj
+# set_property -name "enable_vhdl_2008" -value "1" -objects $obj
+# set_property -name "ip_cache_permissions" -value "read write" -objects $obj
+# set_property -name "ip_output_repo" -value "$proj_dir/${_xil_proj_name_}.cache/ip" -objects $obj
+# set_property -name "mem.enable_memory_map_generation" -value "1" -objects $obj
+# set_property -name "platform.board_id" -value "zc702" -objects $obj
+# set_property -name "platform.extensible" -value "1" -objects $obj
+# set_property -name "revised_directory_structure" -value "1" -objects $obj
+# set_property -name "sim.central_dir" -value "$proj_dir/${_xil_proj_name_}.ip_user_files" -objects $obj
+# set_property -name "sim.ip.auto_export_scripts" -value "1" -objects $obj
+# set_property -name "simulator_language" -value "Mixed" -objects $obj
+# set_property -name "webtalk.xsim_launch_sim" -value "2" -objects $obj
+# if {[string equal [get_filesets -quiet sources_1] ""]} {
+#   create_fileset -srcset sources_1
+# }
+# set obj [get_filesets sources_1]
+# set files [list \
+#  [file normalize "$origin_dir/src/rand127.v" ]\
+#  [file normalize "$origin_dir/src/miller_rabin.v" ]\
+#  [file normalize "$origin_dir/src/key_gen.v" ]\
+# ]
+# set imported_files [import_files -fileset sources_1 $files]
+# set obj [get_filesets sources_1]
+# set_property -name "top" -value "miller_rabin" -objects $obj
+# if {[string equal [get_filesets -quiet constrs_1] ""]} {
+#   create_fileset -constrset constrs_1
+# }
+# set obj [get_filesets constrs_1]
+# set obj [get_filesets constrs_1]
+# if {[string equal [get_filesets -quiet sim_1] ""]} {
+#   create_fileset -simset sim_1
+# }
+# set obj [get_filesets sim_1]
+# set files [list \
+#  [file normalize "$origin_dir/src/prime_tb.v"]\
+#  [file normalize "$origin_dir/src/rand_tb.v"]\
+#  [file normalize "$origin_dir/src/prime_tb_behav.wcfg" ]\
+# ]
+# set imported_files [import_files -fileset sim_1 $files]
+# set obj [get_filesets sim_1]
+# set_property -name "top" -value "prime_tb" -objects $obj
+# set_property -name "top_lib" -value "xil_defaultlib" -objects $obj
+# set obj [get_filesets utils_1]
+# set files [list \
+#  [file normalize "$origin_dir/src/miller_rabin.dcp" ]\
+# ]
+# set imported_files [import_files -fileset utils_1 $files]
+# set file "synth_1/miller_rabin.dcp"
+WARNING: [Vivado 12-818] No files matched '*synth_1/miller_rabin.dcp'
+# set file_obj [get_files -of_objects [get_filesets utils_1] [list "*$file"]]
+# set_property -name "netlist_only" -value "0" -objects $file_obj
+ERROR: [Common 17-55] 'set_property' expects at least one object.
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 11 11:15:13 2023...
