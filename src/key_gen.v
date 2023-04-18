@@ -21,9 +21,31 @@
 
 
 module key_gen #(lambda = 272, eta = 240, nu = 16) (
-    input clk, reset
+    input clk, reset,
+    output finish,
+    output [(lambda + eta)-1 : 0] N_public_modulus,
+    output [lambda-1 : 0] p_key,
+    output [nu - 1 : 0] kappa_key
 );
+    wire [2:0] done = 3'b000;
+    assign done = {finish1, finish2, finish3};
+    assign finish = (done == 3'b111) ? 1'b1 : 1'b0;
 
+    assign N_public_modulus = (done == 3'b111) ? p*q : {(lambda + eta){1'bz}};
+    assign p_key = (done == 3'b111) ? p : {(lambda){1'bz}};
+    assign kappa_key = (done == 3'b111) ? kappa : {(nu){1'bz}};
+
+    always @ (posedge clk) begin
+        if (reset) begin
+            prime_reset1 <= 1'b1;
+            prime_reset2 <= 1'b1;
+            prime_reset3 <= 1'b1;
+        end
+    end
+
+    
+    // instantiating 3 rands and 3 miller rabins to generate primes
+    
     reg [lambda*2 -1:0] accuracy1; 
     reg [lambda-1:0] p;
     reg prime_reset1, rand_reset1;
@@ -34,18 +56,14 @@ module key_gen #(lambda = 272, eta = 240, nu = 16) (
 
     wire [15:0] rand_out1;
     always @ (posedge clk) begin
-        if (finish1) begin
+        if (prime_reset1) begin
             if (rand_count_top1 < lambda/16) begin
                 p[(rand_count_top1+1)*16-1 -: 16] <= rand_out1;
                 rand_count_top1 <= rand_count_top1 + 1;
             end else begin
-                prime_reset1 <= 1'b1;
+                prime_reset1 <= 1'b0;
             end
         end  
-        if (prime_reset1) begin
-            prime_reset1 <= 1'b0;
-            rand_count_top1 <= 1'b0;
-        end
     end
 
     rand127 rand1(
@@ -75,18 +93,14 @@ module key_gen #(lambda = 272, eta = 240, nu = 16) (
 
     wire [15:0] rand_out2;
     always @ (posedge clk) begin
-        if (finish2) begin
+        if (prime_reset2) begin
             if (rand_count_top2 < eta/16) begin
                 q[(rand_count_top2+1)*16-1 -: 16] <= rand_out2;
                 rand_count_top2 <= rand_count_top2 + 1;
             end else begin
-                prime_reset2 <= 1'b1;
+                prime_reset2 <= 1'b0;
             end
         end  
-        if (prime_reset2) begin
-            prime_reset2 <= 1'b0;
-            rand_count_top2 <= 1'b0;
-        end
     end
 
     rand127 rand2(
@@ -116,18 +130,14 @@ module key_gen #(lambda = 272, eta = 240, nu = 16) (
 
     wire [15:0] rand_out3;
     always @ (posedge clk) begin
-        if (finish3) begin
+        if (prime_reset3) begin
             if (rand_count_top3 < nu/16) begin
                 kappa[(rand_count_top3+1)*16-1 -: 16] <= rand_out3;
                 rand_count_top3 <= rand_count_top3 + 1;
-            end else begin
-                prime_reset3 <= 1'b1;
+            end begin
+                prime_reset3 <= 1'b0;
             end
-        end  
-        if (prime_reset3) begin
-            prime_reset3 <= 1'b0;
-            rand_count_top3 <= 1'b0;
-        end
+        end   
     end
 
     rand127 rand3(
@@ -146,4 +156,6 @@ module key_gen #(lambda = 272, eta = 240, nu = 16) (
     .prime(prime3),
     .finish(finish3)
     );
+    
+    //
 endmodule

@@ -54,6 +54,10 @@ module prime_tb #(parameter WORDSIZE = 31)(
 
     wire [15:0] rand_out;
     always @ (posedge clk) begin
+        if (prime_reset) begin
+            prime_reset <= 1'b0;
+            rand_count_top <= 1'b0;
+        end
         if (finish) begin
             if (rand_count_top < WORDSIZE/16) begin
                 potential_prime[(rand_count_top+1)*16-1 -: 16] <= rand_out;
@@ -62,10 +66,6 @@ module prime_tb #(parameter WORDSIZE = 31)(
                 prime_reset <= 1'b1;
             end
         end  
-        if (prime_reset) begin
-            prime_reset <= 1'b0;
-            rand_count_top <= 1'b0;
-        end
     end
 
     rand127 rand(
