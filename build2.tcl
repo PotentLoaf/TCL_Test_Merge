@@ -26,6 +26,7 @@
 #    "C:/Users/saaha/Documents/Code/Research/TCL_Test_Merge/myproject/myproject.srcs/sources_1/imports/src/rand127.v"
 #    "C:/Users/saaha/Documents/Code/Research/TCL_Test_Merge/myproject/myproject.srcs/sources_1/imports/src/miller_rabin.v"
 #    "C:/Users/saaha/Documents/Code/Research/TCL_Test_Merge/myproject/myproject.srcs/sources_1/imports/src/key_gen.v"
+#    "C:/Users/saaha/Documents/Code/Research/TCL_Test_Merge/myproject/myproject.srcs/sources_1/imports/src/prime_gen.v"
 #    "C:/Users/saaha/Documents/Code/Research/TCL_Test_Merge/myproject/myproject.srcs/sim_1/imports/src/prime_tb.v"
 #    "C:/Users/saaha/Documents/Code/Research/TCL_Test_Merge/myproject/myproject.srcs/sim_1/imports/src/rand_tb.v"
 #    "C:/Users/saaha/Documents/Code/Research/TCL_Test_Merge/myproject/myproject.srcs/sim_1/imports/src/prime_tb_behav.wcfg"
@@ -44,6 +45,7 @@ proc checkRequiredFiles { origin_dir} {
  "[file normalize "$origin_dir/myproject/myproject.srcs/sources_1/imports/src/rand127.v"]"\
  "[file normalize "$origin_dir/myproject/myproject.srcs/sources_1/imports/src/miller_rabin.v"]"\
  "[file normalize "$origin_dir/myproject/myproject.srcs/sources_1/imports/src/key_gen.v"]"\
+ "[file normalize "$origin_dir/myproject/myproject.srcs/sources_1/imports/src/prime_gen.v"]"\
  "[file normalize "$origin_dir/myproject/myproject.srcs/sim_1/imports/src/prime_tb.v"]"\
  "[file normalize "$origin_dir/myproject/myproject.srcs/sim_1/imports/src/rand_tb.v"]"\
  "[file normalize "$origin_dir/myproject/myproject.srcs/sim_1/imports/src/prime_tb_behav.wcfg"]"\
@@ -171,6 +173,8 @@ set files [list \
  [file normalize "${origin_dir}/myproject/myproject.srcs/sources_1/imports/src/rand127.v"]\
  [file normalize "${origin_dir}/myproject/myproject.srcs/sources_1/imports/src/miller_rabin.v"]\
  [file normalize "${origin_dir}/myproject/myproject.srcs/sources_1/imports/src/key_gen.v"]\
+ [file normalize "${origin_dir}/myproject/myproject.srcs/sources_1/imports/src/prime_gen.v"]\
+
 ]
 set imported_files [import_files -fileset sources_1 $files]
 

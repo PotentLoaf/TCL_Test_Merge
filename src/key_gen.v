@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module key_gen #(WORDSIZE = 32) (
+module key_gen #(lambda = 272) (
     input clk, reset
 );
 reg [WORDSIZE*2 -1:0] accuracy;
