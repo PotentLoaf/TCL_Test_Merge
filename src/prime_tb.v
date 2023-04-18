@@ -19,7 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 //testing move script
-module prime_tb #(parameter WORDSIZE = 128)(
+module prime_tb #(parameter WORDSIZE = 31)(
 
 );
 
