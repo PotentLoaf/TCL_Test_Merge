@@ -44,6 +44,7 @@ proc checkRequiredFiles { origin_dir} {
  "[file normalize "$origin_dir/src/rand127.v"]"\
  "[file normalize "$origin_dir/src/miller_rabin.v"]"\
  "[file normalize "$origin_dir/src/key_gen.v"]"\
+ "[file normalize "$origin_dir/src/encrypt.v"]"\
  "[file normalize "$origin_dir/src/prime_tb.v"]"\
  "[file normalize "$origin_dir/src/rand_tb.v"]"\
  "[file normalize "$origin_dir/src/prime_tb_behav.wcfg"]"\
@@ -171,6 +172,8 @@ set files [list \
  [file normalize "$origin_dir/src/rand127.v" ]\
  [file normalize "$origin_dir/src/miller_rabin.v" ]\
  [file normalize "$origin_dir/src/key_gen.v" ]\
+ [file normalize "$origin_dir/src/encrypt.v" ]\
+
 ]
 set imported_files [import_files -fileset sources_1 $files]
 

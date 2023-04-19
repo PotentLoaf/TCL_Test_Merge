@@ -23,15 +23,15 @@
 module key_gen #(lambda = 272, eta = 240, nu = 16) (
     input clk, reset,
     output finish,
-    output [(lambda + eta)-1 : 0] N_public_modulus,
+    output [eta-1 : 0] q_param,
     output [lambda-1 : 0] p_key,
-    output [nu - 1 : 0] kappa_key
+    output [nu-1 : 0] kappa_key
 );
     wire [2:0] done = 3'b000;
     assign done = {finish1, finish2, finish3};
     assign finish = (done == 3'b111) ? 1'b1 : 1'b0;
 
-    assign N_public_modulus = (done == 3'b111) ? p*q : {(lambda + eta){1'bz}};
+    assign q_param = (done == 3'b111) ? q : {(eta){1'bz}};
     assign p_key = (done == 3'b111) ? p : {(lambda){1'bz}};
     assign kappa_key = (done == 3'b111) ? kappa : {(nu){1'bz}};
 

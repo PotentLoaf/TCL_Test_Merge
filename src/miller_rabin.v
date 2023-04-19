@@ -18,7 +18,6 @@ module  miller_rabin #(parameter WORDSIZE = 32) (
     reg [WORDSIZE-1:0] mod_exp_result;
     reg mod_exp_finish, mod_exp_reset;
 
-
     // modular exponentiation process
     always @(posedge clk) begin
         if (mod_exp_reset) begin
