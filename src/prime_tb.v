@@ -19,7 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 //testing move script
-module prime_tb #(parameter WORDSIZE = 31)(
+module prime_tb #(parameter WORDSIZE = 32)(
 
 );
 
@@ -63,6 +63,7 @@ module prime_tb #(parameter WORDSIZE = 31)(
                 potential_prime[(rand_count_top+1)*16-1 -: 16] <= rand_out;
                 rand_count_top <= rand_count_top + 1;
             end else begin
+                potential_prime[0] <= 1'b1;
                 prime_reset <= 1'b1;
             end
         end  
